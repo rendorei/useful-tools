@@ -1,0 +1,26 @@
+Vagrant.configure("2") do |config|
+  # just saved the most usable images
+  UB18_IMAGE = "ubuntu/bionic64"
+  CNT_IMAGE = "centos/7"
+
+  # general configuration for single pc
+  config.vm.box = UB18_IMAGE
+  config.vm.box_check_update = false
+  config.vm.hostname = "#{ENV['COMPUTERNAME']}T001-TERRAFORM"
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "public_network"
+
+  # virtualbox machine parameters
+  config.vm.provider "virtualbox" do |subconfig|
+    subconfig.gui = false
+    subconfig.name = "Terraform"
+    subconfig.memory = "2048"
+    subconfig.cpus =  4
+    subconfig.customize ["modifyvm", :id, "--vram", "128"]
+    subconfig.customize ["modifyvm", :id, "--groups", "/Tasks-machines"]
+  end
+
+  # bash/ansible/chef/puppet provision below
+  config.vm.provision "shell", path: "terraform-init.sh"
+
+end
