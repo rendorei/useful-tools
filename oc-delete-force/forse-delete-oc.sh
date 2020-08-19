@@ -47,9 +47,9 @@ if [ ! -z "$NAMESPACE_LIST" ]; then
   echo
   for namespace in ${NAMESPACE_LIST}; do
     echo "Working on deleting ${namespace} resouces: SCC, ClusterRole, ClusterRoleBinding"
-    oc delete scc $(oc get scc | grep ${namespace} | awk '{print $1}')
-    oc delete clusterrole $(oc get clusterrole | grep ${namespace} | awk '{print $1}')
-    oc delete clusterrolebinding $(oc get clusterrolebinding | grep ${namespace} | awk '{print $1}')
+    oc delete scc $(oc get scc | grep "-${namespace}-" | awk '{print $1}')
+    oc delete clusterrole $(oc get clusterrole | grep "-${namespace}-" | awk '{print $1}')
+    oc delete clusterrolebinding $(oc get clusterrolebinding | grep "-${namespace}-" | awk '{print $1}')
     echo "Working on deleting ${namespace}"
     oc get ns ${namespace} -o json > delete-${namespace}-project.json
     sed -i '/"kubernetes"/d' delete-${namespace}-project.json
