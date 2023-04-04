@@ -1,1 +1,3 @@
-Windows terminal configs
+
+# DEPRECATED FOR NOW
+## WIP

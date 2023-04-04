@@ -1,0 +1,79 @@
+####### LENOVO ONLY
+#lenovo-thinkvantage-system-update
+
+####### Browsers
+googlechrome
+firefox
+
+####### IDEs
+#visualstudio2019community
+#sublimetext3
+vscode
+visual-studio-code
+notepadplusplus
+#atom
+#jetbrainstoolbox
+#goland
+#intellijidea-community
+#pycharm
+
+####### Engines
+docker
+#minikube
+lens
+#groovy
+#python3
+#jdk17
+#golang
+
+####### CLI Tools
+git
+microsoft-windows-terminal
+#putty
+#wsl
+kubernetes-cli
+kubectl
+#openshift-cli
+#awscli
+#awstools.powershell
+#azure-cli
+#google-cloud-sdk
+#terraform
+#kubernetes-helm
+#terraform
+
+####### Other programs
+#deluge
+#dropbox
+#virtualbox
+#minikube
+#vagrant
+#totalcommander
+#7zip
+#postman
+#dbeaver
+#cpu-z
+#geforce-experience
+
+####### Social
+#skype
+telegram
+#microsoft-teams
+#viber
+#slack
+#zoom
+#discord
+#teamspeak
+
+####### Media (mgames/books/video)
+adobereader
+paint.net
+#steam
+#origin
+#epicgameslauncher
+#vlc
+#mpc-hc
+#spotify
+#calibre
+#twitch
+#battle.net
